@@ -7,16 +7,6 @@ const init = async () => {
 
   await server.start();
   console.log(`Server is running on ${server.info.uri}`);
-
-  server.route([
-    {
-      method: 'GET',
-      path: '/',
-      handler: (request,h) => {
-        return 'test home path'
-      }
-    }
-  ])
 };
 
 process.on('unhandledRejection', (err) => {
